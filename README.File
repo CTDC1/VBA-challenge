@@ -1,0 +1,12 @@
+##VBA-Challenge README
+
+## For this assignment, I worked with a learning instructor to figure out how to not use an exact number for lastrow.
+
+## I asked them to help me create this formula: LastRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
+
+## The LearningInstructor also showed me a different way to refer to cells as [o1] or [a5], so when showing up in the code, that is where I learned that
+
+## I also asked the professor during office hours about how to make the loop work for all worksheets, and we concluded I had to add "ws." before the code "Cells(x, y)
+
+## I also asked the learning instructor how to format cells to show numbers as a percentage, but we did not figure it out together, so I Googled the VBA code for number formatting
+
