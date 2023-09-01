@@ -26,7 +26,7 @@ Dim GreatestTicker2 As String
 Dim GreatestTicker3 As String
 Dim ws As Worksheet
 
-' Loop through all the worksheets and seeting ws to be shorthand for thisworkbook.worksheets
+' Loop through all the worksheets and setting ws to be shorthand for thisworkbook.worksheets
  For Each ws In ThisWorkbook.Worksheets
  
  ' Using a common forumla to calcualte the last row in the worksheet, this way we do not need to have the exact number everytime
@@ -80,19 +80,18 @@ Dim ws As Worksheet
               Ticker = ws.Cells(i, 1).Value
               CloseChange = ws.Cells(i, 6).Value
     
-' Calculating the Total Change, Percentage Change, and Total Volume
+' Calculating the Total Change, Percentage Change
             TotalChange = CloseChange - OpenChange
             PercentageChange = (TotalChange / OpenChange)
 
-' if statement comparing the current cell against the stored value of GreatestIncrease, we have this after the PercentageChange Calucation so it is accurate
+' if statement comparing the current Value of PercentageChange against the stored value of GreatestIncrease, we have this after the PercentageChange Calucation so it is accurate
                      If PercentageChange >= GreatestIncrease Then
                               GreatestIncrease = PercentageChange
                               GreatestTicker1 = ws.Cells(i, "I").Value
             
                     End If
     
-' if statement comparing the current cell against the stored value of GreatestDecrease, we have this after the PercentageChange Calucation so it is accurate
-                     If PercentageChange >= GreatestIncrease Then
+' if statement comparing the current Value of PercentageChange  against the stored value of GreatestDecrease, we have this after the PercentageChange Calucation so it is accurate   
                    If PercentageChange <= GreatestDecrease Then
                              GreatestDecrease = PercentageChange
                              GreatestTicker2 = ws.Cells(i, "I").Value
